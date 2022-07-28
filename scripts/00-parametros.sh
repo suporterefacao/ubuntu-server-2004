@@ -8,8 +8,8 @@
 # Instagram: https://www.instagram.com/procedimentoem/?hl=pt-br
 # Github: https://github.com/vaamonde
 # Data de criação: 10/10/2021
-# Data de atualização: 09/07/2022
-# Versão: 0.72
+# Data de atualização: 28/07/2022
+# Versão: 0.73
 # Testado e homologado para a versão do Ubuntu Server 20.04.x LTS x64
 #
 # Parâmetros (variáveis de ambiente) utilizados nos scripts de instalação dos Serviços de Rede
@@ -80,20 +80,20 @@ IPV4SERVER="192.168.1.20"
 # CUIDADO!!! o nome da interface de rede pode mudar dependendo da instalação do Ubuntu Server,
 # verificar o nome da interface com o comando: ip address show e mudar a variável INTERFACE com
 # o nome correspondente.
-INTERFACE="enp0s3"
+INTERFACE="enp3s0f1"
 #
 # Variável do arquivo de configuração da Placa de Rede do Netplan do Servidor Ubuntu
 # CUIDADO!!! o nome do arquivo de configuração da placa de rede pode mudar dependendo da 
 # versão do Ubuntu Server, verificar o conteúdo do diretório: /etc/netplan para saber o nome 
 # do arquivo de configuração do Netplan e mudar a variável NETPLAN com o nome correspondente.
-NETPLAN="/etc/netplan/00-installer-config.yaml"
+NETPLAN="/etc/netplan/1-network-manager-all.yaml"
 #
 #=============================================================================================
 #                        VARIÁVEIS UTILIZADAS NO SCRIPT: 01-openssh.sh                       #
 #=============================================================================================
 #
 # Arquivos de configuração (conf) do Serviço de Rede OpenSSH utilizados nesse script
-# 01. /etc/netplan/00-installer-config.yaml = arquivo de configuração da placa de rede
+# 01. /etc/netplan/1-network-manager-all.yaml = arquivo de configuração da placa de rede
 # 02. /etc/hostname = arquivo de configuração do Nome FQDN do Servidor
 # 03. /etc/hosts = arquivo de configuração da pesquisa estática para nomes de host local
 # 04. /etc/nsswitch.conf = arquivo de configuração do switch de serviço de nomes de serviço
@@ -134,7 +134,7 @@ PORTSHELLINABOX="4200"
 #
 # Arquivos de configuração (conf) do Serviço de Rede ISC DHCP Sever utilizados nesse script
 # 01. /etc/dhcp/dhcpd.conf = arquivo de configuração do Servidor ISC DHCP Server
-# 02. /etc/netplan/00-installer-config.yaml = arquivo de configuração da placa de rede
+# 02. /etc/netplan/1-network-manager-all.yaml = arquivo de configuração da placa de rede
 # 03. /etc/default/isc-dhcp-server = arquivo de configuração do serviço do ISC DHCP Server
 #
 # Arquivos de monitoramento (log) do Serviço de Rede ISC DHCP Server utilizados nesse script
@@ -163,7 +163,7 @@ PORTDHCP="67"
 # 01. /etc/hostname = arquivo de configuração do Nome FQDN do Servidor
 # 02. /etc/hosts = arquivo de configuração da pesquisa estática para nomes de host local
 # 03. /etc/nsswitch.conf = arquivo de configuração do switch de serviço de nomes
-# 04. /etc/netplan/00-installer-config.yaml = arquivo de configuração da placa de rede
+# 04. /etc/netplan/1-network-manager-all.yaml = arquivo de configuração da placa de rede
 # 05. /etc/bind/named.conf = arquivo de configuração da localização dos Confs do Bind9
 # 06. /etc/bind/named.conf.local = arquivo de configuração das Zonas do Bind9
 # 07. /etc/bind/named.conf.options = arquivo de configuração do Serviço do Bind9
