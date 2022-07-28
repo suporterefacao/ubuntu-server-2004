@@ -56,7 +56,7 @@ REALM="PTI.INTRA"
 NETBIOS="PTI"
 DOMAIN="pti.intra"
 FQDN="ptispo01ws01.pti.intra"
-IP="172.16.1.20"
+IP="192.168.1.20"
 #
 # Variáveis de configuração do NTP Server
 NTP="a.st1.ntp.br"
